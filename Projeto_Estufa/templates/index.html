@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estufa Automática</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        #status-image {
+            max-width: 500px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+        .disabled-button {
+            background-color: #cccccc;
+            color: #666666;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="my-4">Estufa Automática</h1>
+        <img id="status-image" src="/static/1.png" alt="Status dos Atuadores">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Sensores</h3>
+                <table class="table table-bordered">
+                    <tr><th>LDR:</th><td id="ldr-value">Carregando...</td></tr>
+                    <tr><th>Temperatura:</th><td id="temperature-value">Carregando...</td></tr>
+                    <tr><th>Humidade do Ar:</th><td id="humidity-air-value">Carregando...</td></tr>
+                    <tr><th>Humidade do Solo:</th><td id="humidity-soil-value">Carregando...</td></tr>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <h3>Atuadores</h3>
+                <table class="table table-bordered">
+                    <tr><th>Lâmpada:</th><td id="lamp-status">Desligado</td></tr>
+                    <tr><th>Cooler:</th><td id="cooler-status">Desligado</td></tr>
+                    <tr><th>Bomba:</th><td id="pump-status">Desligado</td></tr>
+                </table>
+            </div>
+        </div>
+        <button id="auto-mode-button" class="btn btn-warning my-4" onclick="toggleAutomaticMode()">Ativar Modo Automático</button>
+        <div class="row mt-4">
+            <div class="col"><button class="btn btn-primary" onclick="toggleActuator('lamp', 'on')">Ligar Lâmpada</button></div>
+            <div class="col"><button class="btn btn-secondary" onclick="toggleActuator('lamp', 'off')">Desligar Lâmpada</button></div>
+            <div class="col"><button class="btn btn-primary" onclick="toggleActuator('cooler', 'on')">Ligar Cooler</button></div>
+            <div class="col"><button class="btn btn-secondary" onclick="toggleActuator('cooler', 'off')">Desligar Cooler</button></div>
+            <div class="col"><button class="btn btn-primary" onclick="toggleActuator('pump', 'on')">Ligar Bomba</button></div>
+        </div>
+    </div>
+
+    <script>
+        function fetchData() {
+            fetch('/data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('ldr-value').innerText = data.ldr + " lux";
+                    document.getElementById('temperature-value').innerText = data.temperature + " °C";
+                    document.getElementById('humidity-air-value').innerText = data.humidity_air + " %";
+                    document.getElementById('humidity-soil-value').innerText = data.humidity_soil + " %";
+                    document.getElementById('lamp-status').innerText = data.lamp;
+                    document.getElementById('cooler-status').innerText = data.cooler;
+                    document.getElementById('pump-status').innerText = data.pump;
+                })
+                .catch(error => console.error('Erro ao buscar dados:', error));
+        }
+
+        function toggleActuator(actuator, action) {
+            fetch('/control', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ actuator, action })
+            })
+            .then(fetchData)
+            .catch(error => console.error('Erro ao controlar atuador:', error));
+        }
+
+        function toggleAutomaticMode() {
+            fetch('/toggle_auto_mode', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('auto-mode-button').innerText = data.modo_automatico ? "Desativar Modo Automático" : "Ativar Modo Automático";
+                })
+                .catch(error => console.error('Erro ao alternar modo automático:', error));
+        }
+
+        setInterval(fetchData, 2000);
+    </script>
+</body>
+</html>
