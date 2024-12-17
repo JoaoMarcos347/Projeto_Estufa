@@ -142,6 +142,9 @@ Essas melhorias permitirão uma análise mais robusta e detalhada das interaçõ
 
 Impacto Esperado:
 Validação científica aprimorada: Maior confiabilidade e reprodutibilidade dos experimentos.
+
 Aplicações avançadas: Possibilidade de uso em biotecnologia, agricultura de precisão e monitoramento ambiental.
+
 Inovação tecnológica: Sistemas mais eficientes e integrados, promovendo avanços sustentáveis no monitoramento e na interação homem-planta.
+
 Esses aprimoramentos fortalecerão as contribuições deste trabalho, ampliando suas aplicações práticas e científicas para o estudo de potenciais elétricos em plantas.
