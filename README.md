@@ -44,7 +44,7 @@ HTML/CSS/JavaScript para interface web
 ![image](https://github.com/user-attachments/assets/4c68402f-fe2b-4ea9-a7e3-f3971d7ff9b7)
 
 
-# 4.Instalação e Configuração
+# 3.Instalação e Configuração
 
 Clone o repositório do projeto:
 
@@ -86,3 +86,29 @@ Estrutura de Arquivos
 Acesse a Interface Web
 Abra o navegador e acesse http://127.0.0.1:5000/ para visualizar a interface que exibe as variáveis da estufa em tempo real.
 
+
+# 4.Funcionamento e Principais Recursos
+Automação das Variáveis Ambientais:
+
+O sistema ajusta luz, temperatura e umidade de forma automática.
+Aquisição de Dados Bioelétricos:
+
+Utilização do amplificador EI-1040 para captar sinais elétricos das plantas.
+Monitoramento em Tempo Real:
+
+Interface web para acompanhar variáveis ambientais e sinais elétricos.
+Uso de Material Sustentável:
+
+Estrutura da estufa construída com um rack de servidor reutilizado.
+
+
+# 5.Resultados Obtidos
+Durante os testes, o sistema demonstrou:
+
+Alta precisão no controle ambiental: luz, temperatura e umidade foram mantidas dentro dos parâmetros experimentais.
+
+Captação eficiente de sinais bioelétricos em plantas como a Mimosa pudica.
+
+A resposta das plantas mostrou que maior luminosidade e temperatura aumentam a amplitude dos sinais elétricos, enquanto a umidade do solo foi fundamental para estabilizar esses sinais.
+
+![alt text](image.png)
