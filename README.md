@@ -12,7 +12,7 @@ Umidade do solo
 Além disso, um sistema de aquisição de dados monitora sinais bioelétricos em tempo real, possibilitando análises detalhadas das interações planta-ambiente.
 
 # 2.Tecnologias Utilizadas
-
+dd
 Hardware:
 Arduino Uno R3 e Arduino Nano
 Amplificador EI-1040
