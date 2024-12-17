@@ -1,5 +1,6 @@
 # Estufa Automatizada para Estudos de Potenciais Elétricos em Plantas
 
+
 # 1.Descrição do Projeto
 
 Este projeto visa a criação de uma estufa automatizada para estudar potenciais bioelétricos em plantas, como os Potenciais de Ação (PAs) e Potenciais de Variação (PVs), sob condições ambientais controladas.
@@ -10,6 +11,7 @@ Luminosidade
 Temperatura
 Umidade do solo 
 Além disso, um sistema de aquisição de dados monitora sinais bioelétricos em tempo real, possibilitando análises detalhadas das interações planta-ambiente.
+
 
 # 2.Tecnologias Utilizadas
 
@@ -42,5 +44,45 @@ HTML/CSS/JavaScript para interface web
 ![image](https://github.com/user-attachments/assets/4c68402f-fe2b-4ea9-a7e3-f3971d7ff9b7)
 
 
+# 4.Instalação e Configuração
 
+Clone o repositório do projeto:
+
+git clone https://github.com/seu-usuario/Projeto_Estufa.git
+cd Projeto_Estufa
+
+Carregue o Código Arduino
+
+Acesse a pasta Estufa_arduino.
+Abra o arquivo Estufa_arduino.ino no Arduino IDE.
+Conecte o Arduino Uno ao computador via cabo USB.
+Carregue o código para o microcontrolador.
+
+Configuração do Flask
+
+Certifique-se de que o Python está instalado (recomendado: versão 3.8 ou superior).
+Instale as dependências necessárias usando pip:
+
+pip install flask
+
+Execute o servidor Flask com o arquivo app.py:
+
+python app.py
+
+O servidor será iniciado e ficará disponível em http://127.0.0.1:5000/.
+
+Estrutura de Arquivos
+
+1-Estufa_arduino/Estufa_arduino.ino: Código para controlar os sensores e atuadores via Arduino.
+
+2-static/: Pasta que contém as imagens utilizadas no projeto (1.png a 8.png).
+
+3-templates/index.html: Interface web para monitorar as variáveis ambientais em tempo real.
+
+4-app.py: Backend Flask que gerencia as rotas e conecta o sistema com o Arduino.
+
+5-README.md: Arquivo de documentação do projeto.
+
+Acesse a Interface Web
+Abra o navegador e acesse http://127.0.0.1:5000/ para visualizar a interface que exibe as variáveis da estufa em tempo real.
 
