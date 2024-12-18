@@ -7,6 +7,7 @@
 
 ![alt text](image-3.png)
 
+---
 
 ## 1.Descrição do Projeto
 
