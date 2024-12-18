@@ -1,5 +1,9 @@
 # Estufa Automatizada para Estudos de Potenciais Elétricos em Plantas
 
+# Autor: João Marcos Alves Aleixo Moreira
+# Orientador: Prof. Dr. Talles Marcelo Gonçalves de Andrade Barbosa
+# Universidade: Pontifícia Universidade Católica de Goiás
+# Trabalho de Conclusão de Curso
 
 ![alt text](image-3.png)
 
