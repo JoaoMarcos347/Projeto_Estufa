@@ -160,3 +160,7 @@ Essas melhorias permitirão uma análise mais robusta e detalhada das interaçõ
 - Inovação tecnológica: Sistemas mais eficientes e integrados, promovendo avanços sustentáveis no monitoramento e na interação homem-planta.
 
 - Esses aprimoramentos fortalecerão as contribuições deste trabalho, ampliando suas aplicações práticas e científicas para o estudo de potenciais elétricos em plantas.
+
+## 7.Vídeo do projeto
+
+Link do Vídeo : https://drive.google.com/file/d/1pMC8f4txCfykcgYcbDDil7jV7I-yFePc/view?usp=drive_link
