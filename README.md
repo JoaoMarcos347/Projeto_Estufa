@@ -5,9 +5,9 @@
 ## Universidade: Pontifícia Universidade Católica de Goiás
 ## Trabalho de Conclusão de Curso
 
-![alt text](image-3.png)
-
 ---
+
+![alt text](image-3.png)
 
 ## 1.Descrição do Projeto
 
