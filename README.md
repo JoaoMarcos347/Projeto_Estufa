@@ -56,6 +56,7 @@ HTML/CSS/JavaScript para interface web
 
 ### Clone o repositório do projeto:
 git clone https://github.com/JoaoMarcos347/estufa.git
+
 cd Projeto_Estufa
 
 ### Carregue o Código Arduino:
